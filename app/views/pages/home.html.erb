@@ -1,9 +1,10 @@
 <div class="jumbotron center">
 	<h2>Medical Centre Acquisition Platform</h2>
-	<br />
-
+	
 	<% if user_signed_in? %>
 	# Welcome to the member area
+	<br />
+	<%= link_to "Acquisition forms", acquisitionform_path, class: "btn btn-primary btn-lg" %>
 	<% else %>
 	<p>
 		<%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
