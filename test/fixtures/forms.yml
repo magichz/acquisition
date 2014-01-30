@@ -1,0 +1,63 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Medical_Centre_ID: 1
+  Medical_Centre_Name: MyString
+  Operation_Days: MyString
+  External_Rating: 1
+  Internal_Rating: 1
+  Property_Type: MyString
+  Practitioner_No: 1
+  Admin_No: 1
+  Nursing_No: 1
+  Specialist_No: 1
+  Rental_Dietician: 1.5
+  Rental_Dentist: 1.5
+  Rental_Physio: 1.5
+  Rental_Hearing: 1.5
+  Revenue_Practice: 1.5
+  Revenue_Medicare: 1.5
+  Revenue_Thirdparty: 1.5
+  Revenue_Alliedhealth: 1.5
+  Rental_Pathology: 1.5
+  Profit_Beforetax: 1.5
+  Offer_Amount: 1.5
+  Pathology_Provider_ID: 1
+  Radiology_Provider_ID: 1
+  Doctor_ID: 1
+  Property_Ownership_ID: 1
+  Contact_ID: 1
+  Accountant_ID: 1
+  Address_ID: 1
+  Software_ID: 1
+
+two:
+  Medical_Centre_ID: 1
+  Medical_Centre_Name: MyString
+  Operation_Days: MyString
+  External_Rating: 1
+  Internal_Rating: 1
+  Property_Type: MyString
+  Practitioner_No: 1
+  Admin_No: 1
+  Nursing_No: 1
+  Specialist_No: 1
+  Rental_Dietician: 1.5
+  Rental_Dentist: 1.5
+  Rental_Physio: 1.5
+  Rental_Hearing: 1.5
+  Revenue_Practice: 1.5
+  Revenue_Medicare: 1.5
+  Revenue_Thirdparty: 1.5
+  Revenue_Alliedhealth: 1.5
+  Rental_Pathology: 1.5
+  Profit_Beforetax: 1.5
+  Offer_Amount: 1.5
+  Pathology_Provider_ID: 1
+  Radiology_Provider_ID: 1
+  Doctor_ID: 1
+  Property_Ownership_ID: 1
+  Contact_ID: 1
+  Accountant_ID: 1
+  Address_ID: 1
+  Software_ID: 1

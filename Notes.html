@@ -1,0 +1,17 @@
+rails generate model Form Medical_Centre_ID:integer Medical_Centre_Name:string  Operation_Days:string  External_Rating:integer Internal_Rating:integer Property_Type:string Practitioner_No:integer  Admin_No:integer Nursing_No:integer Specialist_No:integer Rental_Dietician:float Rental_Dentist:float Rental_Physio:float Rental_Hearing:float Revenue_Practice:float Revenue_Medicare:float Revenue_Thirdparty:float Revenue_Alliedhealth:float Rental_Pathology:float Profit_Beforetax:float Offer_Amount:float Pathology_Provider_ID:integer Radiology_Provider_ID:integer Doctor_ID:integer Property_Ownership_ID:integer Contact_ID:integer Accountant_ID:integer Address_ID:integer Software_ID:integer
+
+rails generate model Pathology_Provider Pathology_Provider_ID:integer Pathology_Provider_Name:string 
+
+rails generate model Radiology_Provider Radiology_Provider_ID:integer Radiology_Provider_Name:string
+
+rails generate model Rating Rating_ID:integer Rating_Desc:string
+
+rails generate model Doctor Doctor_ID:integer Medical_Centre_ID:integer Doctor_Name:string Doctor_Hourly_Rate:float Doctor_Service_Year:integer Doctor_Plan_Year:integer Doctor_Contract:boolean Start_Date:date End_Date:date
+
+rails generate model Property_Ownership Property_Ownership_ID:integer Property_Ownership_Desc:string
+
+rails generate model Contact Contact_ID:integer Contact_Title:string Contact_Position:string Contact_Email:string Phone_Number:string Contact_Type:string
+
+rails generate model Address Address_ID:integer Address_street:string Address_Suburb:string Address_Postcode:string Address_State:string 
+
+rails generate model Client_Software Software_ID:integer Software_Name:string  

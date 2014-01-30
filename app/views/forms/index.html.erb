@@ -1,0 +1,13 @@
+<h1>Listing</h1>
+
+<table>
+	<tr>
+		<th>Name</th>
+	</tr>
+
+	<% @forms.each do |form| %>
+		<tr>
+			<td><%= form.Medical_Centre_Name %></td>
+		</tr>
+	<% end %>
+</table>

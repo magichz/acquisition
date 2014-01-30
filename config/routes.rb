@@ -1,10 +1,16 @@
 Acquisition::Application.routes.draw do
   
+  resources :forms
+
   devise_for :users
   root 'pages#home'
 
   get 'about' => 'pages#about' 
   get 'acquisitionform' => 'pages#acquisitionform' 
+
+  # get 'forms' => 'forms#index'
+
+  # forms GET /forms(.:format)  forms#index
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,10 @@
+<%= form_for :form, url: forms_path do |f| %>
+	<p>
+		<%= f.label :Medical_Centre_Name %><br>
+		<%= f.text_field :Medical_Centre_Name %><br>
+	</p>	
+
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
