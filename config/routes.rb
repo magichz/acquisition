@@ -1,12 +1,14 @@
 Acquisition::Application.routes.draw do
   
+  resources :centres
+
   resources :forms
 
   devise_for :users
   root 'pages#home'
 
   get 'about' => 'pages#about' 
-  get 'acquisitionform' => 'pages#acquisitionform' 
+  get 'acquisitionform' => 'centres#index' 
 
   # get 'forms' => 'forms#index'
 

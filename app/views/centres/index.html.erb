@@ -1,0 +1,29 @@
+<h2>Medical Centres List</h2>
+
+<table class="table table-striped table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Centre</th>
+      <th>Centre name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @centres.each do |centre| %>
+      <tr>
+        <td><%= centre.centre_id %></td>
+        <td><%= centre.centre_name %></td>        
+        <td><%= link_to 'Show', centre %></td>
+        <td><%= link_to 'Edit', edit_centre_path(centre) %></td>
+        <td><%= link_to 'Destroy', centre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Centre', new_centre_path %>

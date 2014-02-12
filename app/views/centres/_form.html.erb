@@ -1,0 +1,123 @@
+<%= simple_form_for @centre,:html => { :class => 'form-horizontal' } do |f| %>
+
+  <% if notification = f.error_notification %>
+    <div class="alert alert-error fade in">
+      <a class="close" data-dismiss="alert" href="#">&times;</a>
+      <%= notification %>
+    </div>
+  <% end %>
+
+  <section id="medical_centre_name">
+  <fieldset>
+    <legend>Medical Centre Name</legend>
+    <%= f.input :centre_name, :input_html => { :class => "span6" }, label: 'Medical Centre Name', placeholder: 'Medical Centre #1' %>
+    </fieldset>
+  </section>
+
+
+  <section id="medical_centre_address">
+  <fieldset>
+    <legend>Medical Centre Address</legend>
+    <%= f.input :address_street, :label => "Street Name" %>
+    <%= f.input :address_suburb, :label => "Suburb Name" %>
+    <%= f.input :address_postcode, :label => "Postcode" %>
+  </fieldset>
+  </section>
+
+  <section id="contact">
+  <fieldset>
+    <legend>Contact</legend>
+    <%= f.input :contact_title, :as => :select, :collection => ["Mr","Mrs","Ms","Dr"]%>
+    <%= f.input :contact_name %>
+    <%= f.input :contact_position, :as => :select, :collection => ["Director","Manager","Staff","Unknown"]%>
+    <%= f.input :contact_email, placeholder: 'email address' %>
+  </fieldset>
+  </section>
+  
+  <section id="Property">
+  <fieldset>
+    <legend>Property</legend>
+      <%= f.input :external_rating, :as => :select, :collection => ["Dated","Poor","Average","Excellent"], :input_html => { :class => "span6" } %>
+      <%= f.input :internal_rating, :as => :select, :collection => ["Dated","Poor","Average","Excellent"], :input_html => { :class => "span6" } %>
+      
+  </fieldset>
+</section>
+
+
+  <%= f.input :operation_days, collection: ["Monday to Friday", "Saturday", "Sunday"], :input_html => { :class => "span6" } %>
+
+  <%= f.input :property_ownership, :as => :select, :collection => ["Owned", "Leased"], :input_html => { :class => "span6" } %>
+
+  <%= f.input :property_type, :as => :select, :collection => ["Residential", "Shopping Centre", "Major Complex","Industrial"], :input_html => { :class => "span6" } %>
+
+  <section id="Practitioners">
+    <fieldset>
+      <legend>Practitioners</legend>
+      <%= f.input :practitioner_no, :input_html => { :class => "span6" }, label: 'Number of General Practitioners'%>
+      <%= f.input :doctor_name %>
+      <%= f.input :contact_name, :as => :boolean, :label => "Is the doctor a share holder?" %>
+      
+      <%= f.input :service_year %>
+      <%= f.input :plan_year %>
+      <%= f.input :doctor_contract %>
+    </fieldset>
+  </section>
+
+  <section id="Staff">
+    <fieldset>
+      <legend>Staff</legend>
+      <%= f.input :admin_no, :input_html => { :class => "span6" }, label: 'Number of admin staff'%>
+      <%= f.input :nursing_no, :input_html => { :class => "span6" }, label: 'Number of nursing staff'%>
+      <%= f.input :specialist_no, :input_html => { :class => "span6" }, label: 'Number of visiting specialist'%>
+    </fieldset>
+  </section>
+
+  <section id="Allied_Service">
+    <fieldset>
+      <legend>Allied Services on Site (rental percentage)</legend>
+      <%= f.input :rental_dietician, :input_html => { :class => "span6" }, label: 'Dietician'%>
+      <%= f.input :rental_dentist, :input_html => { :class => "span6" }, label: 'Dentist'%>
+      <%= f.input :rental_physio, :input_html => { :class => "span6" }, label: 'Physio'%>
+      <%= f.input :rental_hearing, :input_html => { :class => "span6" }, label: 'Hearing'%>
+      <%= f.input :pathology_provider_Name, :as => :select, :collection => ["provider 1", "provider 2", "provider 3","provider 4"], :input_html => { :class => "span6" } %>
+      <%= f.input :radiology_provider_name, :as => :select, :collection => ["provider 1", "provider 2", "provider 3","provider 4"], :input_html => { :class => "span6" } %>
+    </fieldset>
+  </section>
+
+  <section id="Revenue">
+    <fieldset>
+      <legend>Revenue</legend>
+      <%= f.input :revenue_practice, :input_html => { :class => "span6" }, label: 'Practice total revenue'%>
+      <%= f.input :revenue_medicare, :input_html => { :class => "span6" }, label: 'Medicare revenue'%>
+      <%= f.input :revenue_thirdparty, :input_html => { :class => "span6" }, label: 'Third party revenue'%>
+      <%= f.input :revenue_alliedhealth, :input_html => { :class => "span6" }, label: 'Allied health rentals'%>
+      <%= f.input :rental_pathology, :input_html => { :class => "span6" }, label: 'Pathology rental'%>
+
+      <%= f.input :rental_pathology, :input_html => { :class => "span6" }, label: 'Assumed net profit before tax: '%>
+      
+    </fieldset>
+  </section>
+
+  <section id="Accountant">
+    <fieldset>
+      <legend>Accountant</legend>
+    <%= f.input :contact_name %>
+    <%= f.input :address_street %>
+    <%= f.input :phone_number %>
+    <%= f.input :contact_email, placeholder: 'email address' %>
+
+    <%= f.input :radiology_provider_name, :as => :select, :collection => ["provider 1", "provider 2", "provider 3","provider 4"] %>
+
+  </fieldset>
+  </section>
+
+  <section id="TC">
+  <fieldset>
+    <legend>Terms and Conditions</legend>
+    </fieldset>
+  </section>
+
+  <div class="form-actions btn-primary btn-lg centre">
+    <%= f.button :submit %>
+  </div>
+<% end %>
